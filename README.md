@@ -1,24 +1,24 @@
 # Hindi-Character-Recognition
-Recognises Hindi Character using pen gesture drawn in front of a camera. The project is trained on 36 Devanagari Characters. Uses CNN based Deep learning for recognising the Hindi characters .
-Emoji detection using hand gestures.<br /><br />
+Recognises Hindi Character using pen gesture drawn in front of a camera. <br />
+The project is trained on 36 Devanagari Characters. <br />
+Uses CNN based Deep learning for recognising the Hindi characters .<br /><br />
 
-Used contour detection for Emoji Recognition using hand gestures.<br /><br />
+Used contour detection for Hindi Character Recognition using pen gestures.<br /><br />
 
-Used 12 emojis to classify hand gesture.<br />
-Emoji dataset can be downloaded from https://www.kaggle.com/eliasdabbas/emoji-data-descriptions-codepoints?select=Screen+Shot+2019-04-04+at+12.59.10+AM.png<br /><br />
+Used 36 hindi devanagri characers to classify gesture.<br />
+Dataset can be downloaded from https://archive.ics.uci.edu/ml/datasets/Devanagari+Handwritten+Character+Dataset<br /><br />
 
 Procedure :-<br />
-1. Create hand gestures dataset using Create_Dataset.ipynb<br />
-2. Create ".csv" file for all hand gestures using Create_csv.ipynb<br />
+1. Create ".csv" file for all gestures using Create_csv.ipynb<br />
 3. Train our model using Training.ipynb<br />
-4. Run Emoji detection using Emoji_Detection.ipynb<br /><br />
+4. Run Character detection using Hindi_character_detection.ipynb<br /><br />
 
 Methodology :-<br /><br />
 
-Creating hand gesture dataset :-<br />
-Used webacam to captue hand gestures.<br />
-Detected hand colors using cv2.inRange().<br />
-Detected contours of hand gestures and captured 1000 images of each classes.<br /><br />
+Dataset Collected :-<br />
+The image database of Handwritten Devanagari characters. <br />
+There are 36 classes of characters with 2000 examples each. <br />
+The dataset is split into training set(85%) and testing set(15%).<br /><br />
 
 Creating csv file for gesture dataset :-<br />
 Converted images in array using np.asarray()<br />
@@ -43,12 +43,22 @@ Optimizer = "Adam"<br /><br />
 
 Training the model :-<br />
 Then we will train our model on prepares Data and labels.<br />
-We acheived 99.96% traning accuracy.<br /><br />
+We acheived 96.90% traning accuracy.<br /><br />
+
+Training Accuracy :-<br /><br />
+<img src="https://github.com/gearhead0909/Hindi-Character-Recognition/blob/master/Accuracy.png" alt="alt text" width="500" height="300"><br />
+
+Training Loss :-<br /><br />
+<img src="https://github.com/gearhead0909/Hindi-Character-Recognition/blob/master/Loss.png" alt="alt text" width="500" height="300"><br />
+
+Evaluating the Model :-<br />
+Evaluated the model on the test dataset.<br />
+Achieved an accuracy of 91.89% generalised accuracy.<br /><br />
 
 Saving the Model :-<br />
 Then we will save our model for future use.<br /><br />
 
-Then start Emoji_recognition.ipynb to run our real time project.<br />
+Then start Hindi_Character_Recognition.ipynb to run our real time project.<br />
 A sample of the running project is shown below :-<br /><br />
 
-<img src="https://github.com/gearhead0909/Emoji-Recognition/blob/master/Emoji%20Recognition%20screenshot.png" alt="alt text" width="500" height="300">
+<img src="https://github.com/gearhead0909/Hindi-Character-Recognition/blob/master/Screenshot.png" alt="alt text" width="500" height="300">
